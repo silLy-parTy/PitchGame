@@ -21,7 +21,15 @@ public class playerHealth : HealthyBar
 
     void takeDamage(int damage)
     {
-        setHealth(hr.getHealth() - damage);
+        if (((int)hr.getHealth() - damage)<=0)
+        {
+            setHealth(0);
+            //call death screen
+        }
+        else
+        {
+            setHealth(hr.getHealth() - damage);
+        }
     }
     
     void heal(int add) // add is the health which is going to be added to the Player's health
