@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class buttonQuitsUI : MonoBehaviour
+public class buttonQuitUI : MonoBehaviour
 {
-   
-    public void NewGameButton()
+    public void QuitGame()
     {
         Application.Quit();
+        Debug.Log("Game exit");
     }
 }
