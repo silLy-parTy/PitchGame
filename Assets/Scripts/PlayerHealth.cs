@@ -19,9 +19,21 @@ public class playerHealth : HealthyBar
         resetHealth();
     }
 
-    void Damaged(int damage)
+    void takeDamage(int damage)
     {
-        setHealth(getHealth() - damage);
+        setHealth(hr.getHealth() - damage);
     }
     
+    void heal(int add) // add is the health which is going to be added to the Player's health
+    {
+        if ((int)hr.getMaxHealth() > ((int)hr.getHealth() + add))
+        {
+            hr.setHealth(hr.getHealth() + add);
+        }
+        else
+        {
+            hr.giveMaxHealth();
+        }
+
+    }
 }
