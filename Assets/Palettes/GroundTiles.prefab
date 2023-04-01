@@ -42,23 +42,31 @@ Tilemap:
   m_GameObject: {fileID: 3809034292598767894}
   m_Enabled: 1
   m_Tiles:
-  - first: {x: -1, y: 0, z: 0}
+  - first: {x: -2, y: -3, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 1
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
+      m_TileColorIndex: 2
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 16c0ab5b6bf0e2248a01286000a6d8dd, type: 2}
+    m_Data: {fileID: 11400000, guid: 4a046d167d633b146ae0f3e987eeafc2, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileSpriteArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: 0c77cf130812eec428b922077ba5b2eb, type: 3}
+    m_Data: {fileID: 21300000, guid: 097541a9ee5712d4b8a67618b082387a, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 1
     m_Data:
@@ -78,14 +86,36 @@ Tilemap:
       e31: 0
       e32: 0
       e33: 1
+  - m_RefCount: 0
+    m_Data:
+      e00: 1.5476165e-17
+      e01: 0
+      e02: 6.917536e+19
+      e03: 6.917536e+19
+      e10: 3.53e-43
+      e11: 0
+      e12: 9.3e-43
+      e13: 9.3e-43
+      e20: -2.106911e+24
+      e21: 2.2341096e-27
+      e22: -2.645119e-19
+      e23: 3.4561993e+23
+      e30: 4.5905e-41
+      e31: 9.3e-43
+      e32: 9.3e-43
+      e33: 9.32e-43
   m_TileColorArray:
+  - m_RefCount: 0
+    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
+  - m_RefCount: 0
+    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
   - m_RefCount: 1
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -1, y: 0, z: 0}
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Origin: {x: -2, y: -3, z: 0}
+  m_Size: {x: 4, y: 8, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -165,7 +195,7 @@ GameObject:
   - component: {fileID: 7547095015863860642}
   - component: {fileID: 7845801375437577873}
   m_Layer: 0
-  m_Name: Default
+  m_Name: GroundTiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -199,7 +229,7 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
---- !u!114 &9495950699664757
+--- !u!114 &4175780681455497346
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
