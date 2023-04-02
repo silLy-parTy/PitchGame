@@ -6,10 +6,13 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    public enum interactionType { NONE, lightTourch }
+    public enum interactionType { NONE, lightTourch, brasier }
     public interactionType type;
 
     public GameObject light;
+    public SpriteRenderer spriteRenderer;
+    public Sprite newSprite;
+
     //private bool on = false;
 
     private void Reset()
@@ -27,6 +30,10 @@ public class Item : MonoBehaviour
                 light.SetActive(true);
                 SFXManager.sfxInstance.audioSource.PlayOneShot(SFXManager.sfxInstance.lit);
                 
+                break;
+            case interactionType.brasier:
+                spriteRenderer.sprite = newSprite;
+                light.SetActive(true);
                 break;
             default:
                 Debug.Log("NULL interact");
