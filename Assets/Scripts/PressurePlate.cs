@@ -7,6 +7,7 @@ public class PressurePlate : MonoBehaviour
     [SerializeField] private GameObject doorGameObject;
     private Door door;
 
+    public Animator anim;
     public GameObject presPlate;
 
     private void Awake()
