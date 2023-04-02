@@ -6,6 +6,8 @@ public class PressurePlate : MonoBehaviour
 {
     [SerializeField] private GameObject doorGameObject;
     private Door door;
+    public GameObject RTC;
+    public GameObject rock;
 
     public Animator anim;
     public GameObject presPlate;
@@ -22,6 +24,7 @@ public class PressurePlate : MonoBehaviour
             Debug.Log("OPEN");
             door.OpenDoor();
             anim.SetBool("Pressed", true);
+            RTC.GetComponent<RoomTorchControl>().RoomTourchOn();
         }
     }
 
@@ -32,6 +35,7 @@ public class PressurePlate : MonoBehaviour
             Debug.Log("Close");
             door.CloseDoor();
             anim.SetBool("Pressed", false);
+            RTC.GetComponent<RoomTorchControl>().RoomTourchOff();
         }
     }
 }

@@ -32,5 +32,14 @@ public class Item : MonoBehaviour
                 break;
         }
     }
-   
+    public void lightOn()
+    {
+        light.SetActive(true);
+    }
+
+    public void lightOff()
+    {
+        light.SetActive(false);
+    }
+
 }
