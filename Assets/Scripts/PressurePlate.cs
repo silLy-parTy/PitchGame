@@ -21,6 +21,7 @@ public class PressurePlate : MonoBehaviour
         {
             Debug.Log("OPEN");
             door.OpenDoor();
+            anim.SetBool("Pressed", true);
         }
     }
 
@@ -30,6 +31,7 @@ public class PressurePlate : MonoBehaviour
         {
             Debug.Log("Close");
             door.CloseDoor();
+            anim.SetBool("Pressed", false);
         }
     }
 }
