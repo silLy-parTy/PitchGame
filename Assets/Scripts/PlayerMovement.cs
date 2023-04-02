@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-        Debug.Log(movement.y);
+        //Debug.Log(movement.y);
 
         anim.SetFloat("SpeedX", Mathf.Abs(movement.x));
 
