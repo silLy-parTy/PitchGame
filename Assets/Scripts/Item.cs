@@ -9,6 +9,9 @@ public class Item : MonoBehaviour
     public enum interactionType { NONE, lightTourch }
     public interactionType type;
 
+    public GameObject light;
+    //private bool on = false;
+
     private void Reset()
     {
         GetComponent<Collider2D>().isTrigger = true;
@@ -21,6 +24,8 @@ public class Item : MonoBehaviour
         {
             case interactionType.lightTourch:
                 Debug.Log("light");
+                light.SetActive(true);
+                
                 break;
             default:
                 Debug.Log("NULL interact");

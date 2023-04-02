@@ -15,6 +15,7 @@ public class Interactor : MonoBehaviour
         {
             if (InteractInput())
             {
+                detectedObject.GetComponent<Item>().Interact();
                 Debug.Log("INTERACT");
             }
         }
@@ -28,6 +29,15 @@ public class Interactor : MonoBehaviour
     bool DetectedObject()
     {
         Collider2D obj = Physics2D.OverlapCircle(interactionPoint.position, interactionPointRadius, interactableMask);
-        return 
+        if (obj == null)
+        {
+            detectedObject = null;
+            return false;
+        }
+        else
+        {
+            detectedObject = obj.gameObject;
+            return true;
+        }
     }
 }
