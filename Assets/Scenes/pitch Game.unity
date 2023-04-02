@@ -5924,8 +5924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorGameObject: {fileID: 1250321829}
-  RTC: {fileID: 0}
-  rock: {fileID: 0}
+  RTC: {fileID: 548385744}
   anim: {fileID: 576231760}
   presPlate: {fileID: 1420383415}
 --- !u!1 &1117684092
@@ -7989,7 +7988,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorGameObject: {fileID: 1250321829}
   RTC: {fileID: 548385744}
-  rock: {fileID: 0}
   anim: {fileID: 576231760}
   presPlate: {fileID: 1420383415}
 --- !u!1 &1676397193
