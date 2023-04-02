@@ -18,10 +18,13 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
+        Debug.Log("X: " + movement.x);
+
         movement.y = Input.GetAxisRaw("Vertical");
-        //Debug.Log(movement.y);
+        Debug.Log("Y: " + movement.y);
 
         anim.SetFloat("SpeedX", Mathf.Abs(movement.x));
+        anim.SetFloat("SpeedY", Mathf.Abs(movement.y));
 
         if (movement.x > 0 && !facingRight)
         {
@@ -33,8 +36,23 @@ public class PlayerMovement : MonoBehaviour
             Flip();
         }
 
-        
+        if (movement.y == 1)
+        {
+            anim.SetBool("isDown", false);
+            anim.SetBool("isUp", true);
+        }
 
+        if (movement.y == -1)
+        {
+            anim.SetBool("isUp", false);
+            anim.SetBool("isDown", true);
+        }
+
+        if (movement.x == 0 && movement.y == 0)
+        {
+            anim.SetBool("isUp", false);
+            anim.SetBool("isDown", false);
+        }
     }
 
     void FixedUpdate()
