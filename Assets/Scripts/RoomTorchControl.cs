@@ -9,7 +9,7 @@ public class RoomTorchControl : MonoBehaviour
     // Start is called before the first frame update
     public void RoomTourchOn()
     {
-        for (int i =0;i<10; i ++)
+        for (int i =0;i<8; i ++)
         {
             tourches[i].GetComponent<Item>().lightOn();
         }

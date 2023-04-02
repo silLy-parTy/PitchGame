@@ -25,6 +25,7 @@ public class Item : MonoBehaviour
             case interactionType.lightTourch:
                 Debug.Log("light");
                 light.SetActive(true);
+                SFXManager.sfxInstance.audioSource.PlayOneShot(SFXManager.sfxInstance.lit);
                 
                 break;
             default:

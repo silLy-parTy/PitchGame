@@ -12,16 +12,18 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public Animator anim;
 
+    
+
     Vector2 movement;
 
     // Update is called once per frame
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
-        Debug.Log("X: " + movement.x);
+        //Debug.Log("X: " + movement.x);
 
         movement.y = Input.GetAxisRaw("Vertical");
-        Debug.Log("Y: " + movement.y);
+        //Debug.Log("Y: " + movement.y);
 
         anim.SetFloat("SpeedX", Mathf.Abs(movement.x));
         anim.SetFloat("SpeedY", Mathf.Abs(movement.y));
@@ -29,29 +31,35 @@ public class PlayerMovement : MonoBehaviour
         if (movement.x > 0 && !facingRight)
         {
             Flip();
+            
         }
 
         if (movement.x < 0 && facingRight)
         {
             Flip();
+            
         }
 
         if (movement.y == 1)
         {
             anim.SetBool("isDown", false);
             anim.SetBool("isUp", true);
+            
+
         }
 
         if (movement.y == -1)
         {
             anim.SetBool("isUp", false);
             anim.SetBool("isDown", true);
+            
         }
 
         if (movement.x == 0 && movement.y == 0)
         {
             anim.SetBool("isUp", false);
             anim.SetBool("isDown", false);
+            
         }
     }
 

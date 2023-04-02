@@ -25,6 +25,8 @@ public class PressurePlate : MonoBehaviour
             door.OpenDoor();
             anim.SetBool("Pressed", true);
             RTC.GetComponent<RoomTorchControl>().RoomTourchOn();
+            SFXManager.sfxInstance.audioSource.PlayOneShot(SFXManager.sfxInstance.lever);
+            SFXManager.sfxInstance.audioSource.PlayOneShot(SFXManager.sfxInstance.lit);
         }
     }
 
@@ -36,6 +38,7 @@ public class PressurePlate : MonoBehaviour
             door.CloseDoor();
             anim.SetBool("Pressed", false);
             RTC.GetComponent<RoomTorchControl>().RoomTourchOff();
+            SFXManager.sfxInstance.audioSource.PlayOneShot(SFXManager.sfxInstance.lit);
         }
     }
 }
