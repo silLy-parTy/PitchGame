@@ -7,6 +7,8 @@ public class PressurePlate : MonoBehaviour
     [SerializeField] private GameObject doorGameObject;
     private Door door;
 
+    public GameObject presPlate;
+
     private void Awake()
     {
         door = doorGameObject.GetComponent<Door>();
@@ -14,7 +16,7 @@ public class PressurePlate : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (GetComponent<Collider2D>().tag == "Player" || GetComponent<Collider2D>().tag == "Rock")
+        if (collision.gameObject == presPlate)
         {
             Debug.Log("OPEN");
             door.OpenDoor();
@@ -23,10 +25,10 @@ public class PressurePlate : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (GetComponent<Collider2D>().tag != "Player" || GetComponent<Collider2D>().tag != "Rock" )
+        if (collision.gameObject == presPlate)
         {
+            Debug.Log("Close");
             door.CloseDoor();
-            Debug.Log("CLOSE");
         }
     }
 }
